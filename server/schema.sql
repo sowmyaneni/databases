@@ -5,9 +5,9 @@ USE chat;
 CREATE TABLE messages (
   /* Describe your table here.*/
   `id` INTEGER AUTO_INCREMENT NOT NULL,
-  `text` MEDIUMTEXT DEFAULT NULL,
-  `id_username` INTEGER NULL DEFAULT NULL,
-  `id_room` INTEGER NULL DEFAULT NULL,
+  `text` varchar(200) NOT NULL,
+  `id_username` INTEGER not NULL,
+  `id_room` INTEGER NOT NULL,
   PRIMARY KEY (`id`)
 );
 
@@ -16,7 +16,7 @@ DROP TABLE IF EXISTS `username`;
 		
 CREATE TABLE `username` (
   `id` INTEGER AUTO_INCREMENT NOT NULL,
-  `name` MEDIUMTEXT NULL DEFAULT NULL,
+  `name` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
 );
 
@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `room`;
 		
 CREATE TABLE `room` (
   `id` INTEGER AUTO_INCREMENT NOT NULL,
-  `name` MEDIUMTEXT NULL DEFAULT NULL,
+  `name` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 );
 
